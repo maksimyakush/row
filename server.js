@@ -1,6 +1,11 @@
 const express = require('express');
 const requestIp = require('request-ip');
 
+geoip = require('geoip-lite');
+
+var ip = "207.97.227.239";
+var geo = geoip.lookup(ip);
+
 const app = express();
 app.use(requestIp.mw())
 app.post('/error', async(req, res) => {
@@ -10,7 +15,8 @@ app.post('/error', async(req, res) => {
 })
 
 app.get('/', async(req, res) => {
-  console.log(req.ip);
+  var geo = await geoip.lookup(req.clientIp);
+  console.log(geo);
 res.send(`ip: ${req.ip}, clientIp: ${req.clientIp}`);
 })
 
