@@ -14,4 +14,4 @@ app.get('/', async(req, res) => {
 res.send(`ip: ${req.ip}, clientIp: ${req.clientIp}`);
 })
 
-app.listen(3000, () => console.log('server works'))
+app.listen(process.env.PORT || 3000, () => console.log('server works'))
