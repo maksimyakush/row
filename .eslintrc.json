@@ -1,0 +1,53 @@
+{
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+    },
+    // "env": {
+    //     "browser": true
+    // },
+    // "extends": [
+    //     "eslint:recommended",
+    //     "plugin:@typescript-eslint/recommended"
+    // ],
+    "parser": "@babel/eslint-parser"
+    // "parserOptions": {
+    //     "ecmaFeatures": {
+    //         "jsx": true
+    //     },
+    //     "ecmaVersion": "latest",
+    //     "sourceType": "module"
+    // },
+    // "plugins": [
+    //     "@typescript-eslint"
+    // ]
+}
+
+
+
+
+
+
+// module.exports = {
+//   env: {
+//     browser: true,
+//   },
+//   plugins: ['simple-import-sort', 'prettier'],
+//   extends: ['plugin:import/recommended', 'prettier'],
+//   parserOptions: {
+//     sourceType: 'module',
+//   },
+//   globals: {
+//     Promise: 'off',
+//   },
+//   rules: {
+//     'comma-dangle': ['error', 'only-multiline'],
+//     'no-var': 'error',
+//     'prefer-const': 'error',
+//     'no-console': 'error',
+//     'react/prop-types': 0, // Отключаем правило проверки передаваемых типов.
+//     'simple-import-sort/imports': 'error',
+//     'simple-import-sort/exports': 'error',
+//     'prettier/prettier': 'error',
+//   },
+// };

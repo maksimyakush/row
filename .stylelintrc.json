@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "plugin/declaration-block-no-ignored-properties": true
+  },
+  "plugins": [
+    "stylelint-declaration-block-no-ignored-properties"
+  ]
+}
