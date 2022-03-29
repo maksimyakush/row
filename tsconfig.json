@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
     "jsx": "react",
     "esModuleInterop": true,
     "allowJs": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noImplicitAny": true
   }
 }

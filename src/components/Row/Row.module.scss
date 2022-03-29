@@ -1,0 +1,56 @@
+@use "sass:map";
+
+$root: ".row";
+
+#{$root} {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$paddings: (
+  ".p": "padding",
+  ".pb": "padding-bottom",
+  ".pt": "padding-top",
+  ".pl": "padding-left",
+  ".pr": "padding-right",
+);
+$margins: (
+  ".m": "margin",
+  ".mb": "margin-bottom",
+  ".mt": "margin-top",
+  ".ml": "margin-left",
+  ".mr": "margin-right",
+);
+$justify-content: (
+  ".justify_content__space_between": "space-between",
+  ".justify_content__space_around": "space-around",
+);
+
+/**
+  ".selector", "padding" --> {.selector: {padding: i}}
+**/
+@mixin set_selector($selector, $prop, $unit: "px", $to: 40) {
+  @for $i from 1 through $to {
+    #{$selector}_#{$i} {
+      #{$prop}: #{$i}#{$unit};
+    }
+  }
+}
+
+@mixin set_selectors($map, $unit: "px") {
+  @each $selector, $prop in $map {
+    @include set-selector($selector: $selector, $prop: $prop, $unit: $unit);
+  }
+}
+
+@include set-selectors(map.merge($paddings, $margins));
+
+.justify_content__space-between {
+  justify-content: space-between;
+}
+
+.justify_content__space_around {
+  justify-content: space-around;
+}

@@ -1,19 +1,28 @@
-import React from 'react';
-import reactDom from 'react-dom';
-import second from './second';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useReducer,
+  useContext,
+  createContext,
+  ReactChild,
+  ReactChildren,
+} from "react";
+import reactDom from "react-dom";
+import { Row } from "./components/Row";
 
-
-console.log(second(111));
-var q = "sddssdindex.tsx";
-
-
-
-const Total = () => {
-  return <>hello</>;
-};
+import "./styles.scss";
 
 const App = () => {
-  return <Total />;
+  const [value, setValue] = useState(1);
+
+  return (
+    <Row mt={10} justifyContent={"space-between"}>
+      <p>Maksim</p>
+      <p>Maksim</p>
+    </Row>
+  );
 };
 
-reactDom.render(<App />, document.querySelector('.root'));
+reactDom.render(<App />, document.querySelector(".root"));
