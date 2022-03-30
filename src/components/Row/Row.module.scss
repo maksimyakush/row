@@ -9,28 +9,20 @@ $root: ".row";
   margin: 0;
 }
 
-$paddings: (
+$selectors: (
   ".p": "padding",
   ".pb": "padding-bottom",
   ".pt": "padding-top",
   ".pl": "padding-left",
   ".pr": "padding-right",
-);
-$margins: (
   ".m": "margin",
   ".mb": "margin-bottom",
   ".mt": "margin-top",
   ".ml": "margin-left",
   ".mr": "margin-right",
-);
-$justify-content: (
-  ".justify_content__space_between": "space-between",
-  ".justify_content__space_around": "space-around",
+  ".gap": "gap",
 );
 
-/**
-  ".selector", "padding" --> {.selector: {padding: i}}
-**/
 @mixin set_selector($selector, $prop, $unit: "px", $to: 40) {
   @for $i from 1 through $to {
     #{$selector}_#{$i} {
@@ -45,12 +37,18 @@ $justify-content: (
   }
 }
 
-@include set-selectors(map.merge($paddings, $margins));
+@include set-selectors($selectors);
 
 .justify_content__space-between {
   justify-content: space-between;
 }
 
-.justify_content__space_around {
+.justify_content__space-around {
   justify-content: space-around;
 }
+
+.align_items__center {
+  align-items: center;
+}
+
+$primary-color: "color";

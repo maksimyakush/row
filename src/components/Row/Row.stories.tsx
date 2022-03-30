@@ -9,14 +9,18 @@ export default {
   component: Row,
 };
 
-const Template = (args) => <Row {...args}><button>ds</button><button>ds</button>  </Row>;
+const Template = args => (
+  <Row {...args}>
+    <button>ds</button>
+    <button>ds</button>{' '}
+  </Row>
+);
 export const Playground = Template.bind({});
 //👇 Each story then reuses that template
 
 Playground.args = {
-  children: 'Maksim111',
+  children: 'Click',
   mb: 10,
   mt: 10,
-  pt: 10
-}
-
+  pt: 10,
+};
